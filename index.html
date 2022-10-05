@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="main-style.css">
+    <link rel="stylesheet" href="mouse-position.css">
+    <title>Document</title>
+
+    <style>
+
+#game:hover{
+  
+
+  
+  cursor: url(images/start.png),pointer;
+
+}
+
+    </style>
+</head>
+<body>
+    <div id="header"> 
+        <h2>HIT THE RAT</h2>
+    </div>
+    <div id="instruction">
+
+
+     <center><Button  onclick=" myFunction()">Start</Button> 
+
+
+     <h1 style="margin-left:30px ;">Difficulty Level</h1>
+     
+     <h3 style="margin-left: 20px; color: yellow;"> Easy Medium Hard</h3> 
+        <input style="width: 200px; margin-left: 20px;" id="rang"  oninput="rangee()" type="range" min="1" max="3">
+        <br>
+        
+     <h1>Score:</h1>   
+     <h1 id ='p1'>0</h1>
+    </center> 
+    </div>
+    <div id="game">
+
+
+        <div id="m1">
+          <p onclick="sp()"></p>
+        </div>
+        
+        <div id="m2"> 
+          <p onclick="sp()"></p>
+        </div>
+
+        <div id="m3">
+          <p onclick="sp()"></p>
+        </div>
+
+
+        <div id="m4">
+          <p onclick="sp()"></p>
+        </div>
+        
+
+        <div id="m5">
+          <p onclick="sp()"></p>
+        </div>
+        
+
+        <div id="m6">
+          <p onclick="sp()"></p>
+        </div>
+        
+        <div id="m7">
+          <p onclick="sp()"></p>
+        </div>
+        
+        <div id="m8">
+          <p onclick="sp()"></p>
+        </div>
+        
+        <div id="m9">
+          <p onclick="sp()"></p>
+        </div>
+
+    </div>
+
+<script>
+
+var glvl;
+
+var speedx;
+function rangee(){
+
+  glvl =document.getElementById('rang').value;
+
+
+  if(glvl==1){
+
+    speedx = 800;
+  }
+  else if(glvl==2){
+
+    speedx =500;
+  }
+  else if(glvl==3){
+
+    speedx = 300;
+    $(function(){
+          $("p").hide();
+      var xx = Math.floor(Math.random() * 9)
+      $("p:eq("+ xx+ ")").slideDown(speedx);
+      $("p:eq("+ xx+ ")").slideUp(speedx);
+        });
+  }
+
+
+}
+
+function myFunction() {
+    myVar = setInterval(recall,2000);
+  }
+      function recall(){    
+      $(function(){
+          $("p").hide();
+      var zz = Math.floor(Math.random() * 9)
+      $("p:eq("+ zz+ ")").slideDown(speedx);
+      $("p:eq("+ zz+ ")").slideUp(speedx);
+        });
+      }
+
+  
+      
+  var x = 1;
+          function sp(){
+                 document.getElementById("p1").innerHTML = x;
+              x++;
+          }
+          
+         
+</script>
+</body>
+</html>

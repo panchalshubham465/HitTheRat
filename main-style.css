@@ -1,0 +1,59 @@
+body{
+    background-image: url('images/backgr.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px;
+    padding-top: 10px;
+}
+#instruction{
+    border: 2px solid white;
+    border-radius: 10px;
+    height: 600px;
+    width: 400px;
+    float: left;
+    margin-right: 90px;
+    padding-top: 100px;
+}
+h1{
+    color: white;
+}
+h2{
+    color: white;
+    font-size: 40px;
+    font-style: italic;
+    text-align: center; 
+}
+
+#game{
+    background-image: url('images/ground.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    width: 400px;
+    padding: 50px;
+    float: left;
+    margin-left: 30px;
+}
+
+p{   
+    height: 100px;
+    background-image: url("images/mos.png");
+    background-repeat: no-repeat;
+    background-size: 90px 100px;
+    margin: 0;
+    width: 200px;
+}
+
+button{
+    font-size: 40px;
+    color: white;
+    border: 4px solid yellow;
+    padding: auto;
+    background-color:#990000;
+    width: 250px;
+    text-align: center;
+    padding: 10px;
+    font-style: italic;
+    margin-top: 20px;
+    border-radius: 20px;
+  }
